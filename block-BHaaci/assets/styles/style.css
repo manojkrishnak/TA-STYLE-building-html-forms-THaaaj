@@ -61,14 +61,19 @@ body{
     line-height: 1.2;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    background: url("../bg-intro-desktop.png") #FF7978 no-repeat;
     color: #FEFCFF;
+}
+
+main{
+    background: url("../bg-intro-desktop.png") no-repeat,  linear-gradient(#FF7978, #FF7978);
+    height: 100vh;
+    background-size: cover;
 }
 
 .container{
     max-width: 1300px;
     width: 100%;
-    padding: 150px;
+    padding: 80px 130px;
     margin: 0 auto;
 }
 
@@ -93,7 +98,7 @@ body{
 }
 
 .flex-50{
-    flex: 0 1 48.5%;
+    flex: 0 1 48%;
 }
 
 .clr-white{
@@ -134,20 +139,21 @@ strong{
 .user-form .free-trial-btn{
     background-color: #5D54A3;
     font-size: 14px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: inset 0 -4px 0 1px #955884;
     width: 100%;
     display: inline-block;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 300;
+    box-shadow: 0 3px 0 0 rgb(0, 0, 0, 0.3);
 }
 
 .user-form form{
     background-color: #FEFCFF;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: inset 0 -3px 0 1px rgb(39, 39, 39, 0.7);
+    box-shadow: 0 3px 0 0 rgb(0, 0, 0, 0.3);
 }
 
 .user-form form p{
@@ -167,6 +173,7 @@ strong{
 }
 
 .user-form input{
+    display: inline-block;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -189,7 +196,7 @@ strong{
     font-weight: 500;
     font-size: 12px;
     letter-spacing: 1px;
-    border-bottom: 3px solid #2d9667;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
     cursor: pointer;
 }
