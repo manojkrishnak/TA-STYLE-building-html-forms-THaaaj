@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="A User registration page">
-        <meta name="keywords" content="html, css, js, forms">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-        <link href="./assets/styles/style.css" rel="stylesheet">
-        <title>User Registration Form</title>
-    </head>
-    <body>
-        <main>
-            <section>
-                <div class="container flex justify-content-sb">
-                    <div class="heading flex flex-dir-col flex-50 justify-content-ct">
-                        <h1>Learn to code by watching others</h1>
-                        <p>See how experienced developers solve problems in real-time. Watched scripted tutorial is great, but understanding how developers think is invaluable.</p>
-                    </div>
-                    <div class="user-form flex flex-50 flex-dir-col">
-                        <fieldset>
-                            <div>
-                                <a class="clr-white free-trial-btn" href="#"><strong>Try it free 7 days</strong> then &#8377;1500/mo. thereafter</a>
-                            </div>
-                            <form action="./registration" method="POST" class="">
-                                <input type="text" name="firstname" id="firstname" placeholder="First Name">
-                                <input type="text" name="lastname" id="lastname" placeholder="Last Name">
-                                <input type="email" name="email" id="email" placeholder="Email Address">
-                                <input type="password" name="password" id="password" placeholder="Password">
-                                <button class="create-btn" type="submit">Claim your free trial</button>
-                                <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
-                            </form>
-                        </fieldset>
-                    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A User registration page">
+    <meta name="keywords" content="html, css, js, forms">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="./assets/styles/style.css" rel="stylesheet">
+    <title>User Registration Form</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="container flex justify-content-sb">
+                <div class="heading flex flex-dir-col flex-50 justify-content-ct">
+                    <h1>Learn to code by watching others</h1>
+                    <p>See how experienced developers solve problems in real-time. Watched scripted tutorial is great,
+                        but understanding how developers think is invaluable.</p>
                 </div>
-            </section>
-        </main>
-    </body>
+                <div class="user-form flex flex-50 flex-dir-col">
+                    <div>
+                        <a class="clr-white free-trial-btn" href="#"><strong>Try it free 7 days</strong> then
+                            &#8377;1500/mo. thereafter</a>
+                    </div>
+                    <form action="./registration" method="POST">
+                        <fieldset>
+                            <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                            <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                            <input type="email" name="email" id="email" placeholder="Email Address">
+                            <input type="password" name="password" id="password" placeholder="Password">
+                            <button class="create-btn" type="submit">Claim your free trial</button>
+                            <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
 </html>
