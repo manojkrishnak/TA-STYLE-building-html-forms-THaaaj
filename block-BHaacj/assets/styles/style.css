@@ -1,0 +1,441 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* custom styles */
+
+/* General */
+
+:root{
+    --primary-clr: #69C6BA;
+    --asia-bg: #C66995;
+}
+
+
+*, 
+*::after, 
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.4;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+.clearfix::before, .clearfix::after{
+    content: "";
+    display: table;
+}
+
+.clearfix::after{
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-dir-col{
+    flex-direction: column;
+}
+
+.justify-content-sb{
+    justify-content: space-between;
+}
+
+.justify-content-ct{
+    justify-content: center;
+}
+
+.justify-content-ed{
+    justify-content: end;
+}
+
+.align-items-ct{
+    align-items: center;
+}
+
+.align-items-ed{
+    align-items: flex-end;
+}
+
+.text-ct{
+    text-align: center;
+}
+
+.flex-28{
+    flex: 0 1 28%;
+}
+
+.flex-46{
+    flex: 0 1 46%;
+}
+
+.flex-50{
+    flex: 0 1 50%;
+}
+
+.flex-70{
+    flex: 0 1 50%;
+}
+
+.width-80{
+    width: 95%;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.height-75{
+    height: 75%;
+}
+
+.square-btn{
+    display: inline-block;
+    padding: 15px;
+    font-size: 14px;
+    border: 0;
+    text-transform: uppercase;
+}
+
+strong{
+    font-weight: 700;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+/* Header */
+.header{
+    background-color: #ffffff;
+    padding: 20px 100px;
+}
+
+.header h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.navbar li{
+    margin-right: 40px;
+}
+
+.navbar a{
+    color: #000000;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+a.active{
+    color: var(--primary-clr);
+}
+
+
+/* main */
+main{
+    background-color: #E6E6E6;
+}
+
+.hero-bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../banner.jpg");
+    background-size: cover;
+    height: 85vh;
+    color: #ffffff;
+    padding: 20px 0;
+    
+}
+
+.hero-bg .fa-chevron-down{
+    background-color: #69C6BA;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.hero-bg h2{
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.hero-bg p{
+    margin-bottom: 20px;
+}
+
+.hero-bg .hero-text{
+    margin-bottom: 60px;
+}
+
+.hero-bg .holiday-planning{
+    height: 220px;
+}
+
+.dots{
+    margin: 10px 0;
+}
+
+/* Form */
+
+
+.holiday-planning-form{
+    background-color: #ffffff;
+    padding: 30px;
+    width: 80%;
+}
+
+.holiday-planning-form label{
+    color: #000000;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.holiday-planning-form input{
+    display: block;
+    margin-top: 15px;
+    border: 0;
+    padding: 10px;
+}
+
+.holiday-planning-form input[type="text"]::placeholder{
+    color: #C6C9CD;
+}
+
+.holiday-planning-form input[type="number"]::placeholder{
+    color: #000000;
+}
+
+.people-stay .input-type-num{
+    margin-left: 25px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    background: transparent;
+}
+
+.form-submit-btn{
+    color: #ffffff;
+    background-color: var(--primary-clr);
+    cursor: pointer;
+}
+
+.row-1{
+    margin-bottom: 40px;
+}
+
+/* Section-1 */
+
+
+.section-1-bg{
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
+    padding: 40px 150px;
+    background-color: #EFEFEF;
+}
+
+.section-1 .explore-btn{
+    background-color: var(--primary-clr);
+    color: #ffffff;
+    padding: 15px 25px;
+}
+
+.section-1-bg h2{
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-1-bg p{
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Section-2 */
+ .section-2-bg{
+    background-color: #fff;
+    position: relative;
+    height: 370px;
+}
+
+.places-img{
+    width: 50%;
+}
+
+.places-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.chevron-icons{
+    position: absolute;
+    left: 38%;
+    top: 45%;
+}
+
+.chevron-icons .fas{
+    color: #E0DEDB;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.article-right{
+    padding: 40px;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+
+.article-left{
+    padding: 40px;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+
+.margin-0{
+    margin-left: 100%;
+}
+
+.article-left h3, .article-right h3{
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.article-left p, .article-right p{
+    font-size: 12px;
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+/* for sub section - 2 */
+.sub-section-2 .places-img{
+    width: 50%;
+}
+
+.places-img img{
+    width: 100%;
+}
+.europe{
+    background-color: var(--primary-clr);
+}
+
+.asia{
+    background-color: var(--asia-bg);
+}
+
+/* Europe block */
+.europe .continue-btn{
+    color: var(--primary-clr);
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.sub-section-2 .chevron-icons{
+    position: absolute;
+    left: 55%;
+    top: 45%;
+}
+
+/* Asia block */
+
+.asia .continue-btn{
+    color: var(--asia-bg);
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+
+/* Section -3 */
+
+.continents{
+    padding: 0 30px;
+    background-color: var(--primary-clr);
+}
+
+.continents-img{
+    display: inline-block;
+    width: 13.5%;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+figcaption{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.continents .active-country{
+    background-color: var(--asia-bg);
+    padding: 20px 10px;
+}
