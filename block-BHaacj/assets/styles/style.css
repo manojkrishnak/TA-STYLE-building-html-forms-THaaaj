@@ -68,6 +68,7 @@ body{
     line-height: 1.4;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    /* padding-bottom: 400px; */
 }
 
 .container{
@@ -105,7 +106,7 @@ a{
 }
 
 .justify-content-ed{
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .align-items-ct{
@@ -120,6 +121,14 @@ a{
     text-align: center;
 }
 
+.flex-20{
+    flex: 0 1 20%;
+}
+
+.flex-30{
+    flex: 0 1 30%;
+}
+
 .flex-28{
     flex: 0 1 28%;
 }
@@ -132,10 +141,9 @@ a{
     flex: 0 1 50%;
 }
 
-.flex-70{
-    flex: 0 1 50%;
+.flex-60{
+    flex: 0 1 60%;
 }
-
 .width-80{
     width: 95%;
 }
@@ -146,6 +154,10 @@ a{
 
 .height-75{
     height: 75%;
+}
+
+.inner-padding{
+    padding: 35px 70px;
 }
 
 .square-btn{
@@ -196,7 +208,7 @@ a.active{
 
 
 /* main */
-main{
+main, footer{
     background-color: #E6E6E6;
 }
 
@@ -289,11 +301,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 /* Section-1 */
-
-
 .section-1-bg{
-    /* padding-top: 40px;
-    padding-bottom: 40px; */
     padding: 40px 150px;
     background-color: #EFEFEF;
 }
@@ -316,126 +324,248 @@ input[type=number]::-webkit-inner-spin-button {
     margin-bottom: 20px;
 }
 
-/* Section-2 */
- .section-2-bg{
-    background-color: #fff;
+
+/* Section 2 */
+.each-article{
     position: relative;
-    height: 370px;
+    background-color: #fff;
 }
-
-.places-img{
-    width: 50%;
-}
-
-.places-img img{
-    width: 100%;
-    height: 100%;
-}
-
-.chevron-icons{
-    position: absolute;
-    left: 38%;
-    top: 45%;
-}
-
-.chevron-icons .fas{
-    color: #E0DEDB;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-}
-
-.article-right{
-    padding: 40px;
-    width: 50%;
-    height: 60%;
-    position: absolute;
-    right: 5%;
-    top: 20%;
-}
-
-.article-left{
-    padding: 40px;
-    width: 50%;
-    height: 60%;
-    position: absolute;
-    left: 5%;
-    top: 20%;
-}
-
-.margin-0{
-    margin-left: 100%;
-}
-
-.article-left h3, .article-right h3{
-    font-size: 24px;
-    color: #ffffff;
-}
-
-.article-left p, .article-right p{
-    font-size: 12px;
-    margin: 15px 0;
-    color: #ffffff;
-}
-
-/* for sub section - 2 */
-.sub-section-2 .places-img{
-    width: 50%;
-}
-
-.places-img img{
+.each-article-img img{
     width: 100%;
 }
-.europe{
+
+.each-article-content{
+    padding: 32px;
     background-color: var(--primary-clr);
+    height: 230px;
+    width: 50%;
+}
+
+.each-article-content-right{
+    position: absolute;
+    right: 3%;
+    top: 20%;
+}
+
+.each-article-content-left{
+    position: absolute;
+    left: 3%;
+    top: 20%;
+}
+
+.each-article-content h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.each-article-content p{
+    font-size: 14px;
+    color: #ffffff;
+    margin: 12px 0;
+}
+
+.each-article-content .continue-reading-btn{
+    color: var(--primary-clr);
+    background-color: #fff;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .asia{
     background-color: var(--asia-bg);
 }
 
-/* Europe block */
-.europe .continue-btn{
-    color: var(--primary-clr);
-    background-color: #fff;
-    padding: 10px 20px;
-}
-
-.sub-section-2 .chevron-icons{
-    position: absolute;
-    left: 55%;
-    top: 45%;
-}
-
-/* Asia block */
-
-.asia .continue-btn{
+.asia .to-left-btn{
     color: var(--asia-bg);
-    background-color: #fff;
-    padding: 10px 20px;
+}
+
+/* Chevron icons */
+.chevron-icons .fas{
+    background-color: rgba(0,0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    margin-left: 4px;
+}
+
+.icons-left{
+    position: absolute;
+    left: 39%;
+    top: 50%;
+}
+
+.icons-right{
+    position: absolute;
+    right: 39%;
+    top: 50%;
+    margin-right: 4px;
+
+}
+
+.pull-right{
+   margin-left: 50%;
 }
 
 
 /* Section -3 */
-
-.continents{
-    padding: 0 30px;
-    background-color: var(--primary-clr);
+.continent{
+    background-color: #69C6BA;
+    padding: 25px 15px;
+    width: 14.5%;
 }
 
-.continents-img{
-    display: inline-block;
-    width: 13.5%;
-    height: 70px;
-    margin-bottom: 15px;
-}
-
-figcaption{
+.continent p{
     font-size: 12px;
+    color: #fff;
     text-transform: uppercase;
-    color: #ffffff;
 }
 
-.continents .active-country{
+.active-country, .continent:hover{
     background-color: var(--asia-bg);
-    padding: 20px 10px;
+}
+
+
+/* Section -4 */
+
+.section-4 .inner-padding{
+    background-color: #fff;
+}
+
+.recommended{
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.recommended .recommended-img img{
+    width: 100%;
+}
+
+.recommended-content{
+    padding: 20px;
+    background-color: #fff;
+}
+
+.recommended-content h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.recommended-content h4{
+    font-size: 12px;
+    font-weight: 500;
+    color: #C66995;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.recommended-content p{
+    font-size: 12px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.recommended-price{
+    padding: 10px;
+    background-color: #69C6BA;
+    position: relative;
+}
+
+.recommended-price h4{
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.recommended-price a{
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.button-curve{
+    position: absolute;
+    right: 86%;
+    height: 100%;
+
+}
+
+.button-curve img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.section-4 .more-btn{
+    background-color: #69C6BA;
+    color: #fff;
+}
+
+/* Section -5 */
+
+.map{
+    position: relative;
+    font-size: 0;
+}
+
+.map iframe{
+    line-height: 0;
+}
+
+.callme form{
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.callme .input, .callme textarea{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border: 0;
+}
+
+.callme textarea::placeholder{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input-48{
+    flex: 0 1 48%;
+}
+
+.input-48 input{
+    width: 100%;
+}
+
+.input-100, .textarea-100{
+    flex: 0 1 100%;
+}
+
+.callme .form-submit{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    background-color: #69C6BA;
+    padding: 7px;
+}
+
+.map .callme{
+    position: absolute;
+    right: 5%;
+    top: 15%;
+}
+
+
+/* footer */
+.footer{
+    padding: 20px 40px;
+    background-color: #69C6BA;
+    font-size: 14px;
+    color: #fff;
 }
