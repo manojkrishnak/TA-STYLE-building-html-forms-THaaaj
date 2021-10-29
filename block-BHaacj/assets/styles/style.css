@@ -1,0 +1,571 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* custom styles */
+
+/* General */
+
+:root{
+    --primary-clr: #69C6BA;
+    --asia-bg: #C66995;
+}
+
+
+*, 
+*::after, 
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.4;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    /* padding-bottom: 400px; */
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+.clearfix::before, .clearfix::after{
+    content: "";
+    display: table;
+}
+
+.clearfix::after{
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-dir-col{
+    flex-direction: column;
+}
+
+.justify-content-sb{
+    justify-content: space-between;
+}
+
+.justify-content-ct{
+    justify-content: center;
+}
+
+.justify-content-ed{
+    justify-content: flex-end;
+}
+
+.align-items-ct{
+    align-items: center;
+}
+
+.align-items-ed{
+    align-items: flex-end;
+}
+
+.text-ct{
+    text-align: center;
+}
+
+.flex-20{
+    flex: 0 1 20%;
+}
+
+.flex-30{
+    flex: 0 1 30%;
+}
+
+.flex-28{
+    flex: 0 1 28%;
+}
+
+.flex-46{
+    flex: 0 1 46%;
+}
+
+.flex-50{
+    flex: 0 1 50%;
+}
+
+.flex-60{
+    flex: 0 1 60%;
+}
+.width-80{
+    width: 95%;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.height-75{
+    height: 75%;
+}
+
+.inner-padding{
+    padding: 35px 70px;
+}
+
+.square-btn{
+    display: inline-block;
+    padding: 15px;
+    font-size: 14px;
+    border: 0;
+    text-transform: uppercase;
+}
+
+strong{
+    font-weight: 700;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+/* Header */
+.header{
+    background-color: #ffffff;
+    padding: 20px 100px;
+}
+
+.header h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.navbar li{
+    margin-right: 40px;
+}
+
+.navbar a{
+    color: #000000;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+a.active{
+    color: var(--primary-clr);
+}
+
+
+/* main */
+main, footer{
+    background-color: #E6E6E6;
+}
+
+.hero-bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../banner.jpg");
+    background-size: cover;
+    height: 85vh;
+    color: #ffffff;
+    padding: 20px 0;
+    
+}
+
+.hero-bg .fa-chevron-down{
+    background-color: #69C6BA;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.hero-bg h2{
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.hero-bg p{
+    margin-bottom: 20px;
+}
+
+.hero-bg .hero-text{
+    margin-bottom: 60px;
+}
+
+.hero-bg .holiday-planning{
+    height: 220px;
+}
+
+.dots{
+    margin: 10px 0;
+}
+
+/* Form */
+
+
+.holiday-planning-form{
+    background-color: #ffffff;
+    padding: 30px;
+    width: 80%;
+}
+
+.holiday-planning-form label{
+    color: #000000;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.holiday-planning-form input{
+    display: block;
+    margin-top: 15px;
+    border: 0;
+    padding: 10px;
+}
+
+.holiday-planning-form input[type="text"]::placeholder{
+    color: #C6C9CD;
+}
+
+.holiday-planning-form input[type="number"]::placeholder{
+    color: #000000;
+}
+
+.people-stay .input-type-num{
+    margin-left: 25px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    background: transparent;
+}
+
+.form-submit-btn{
+    color: #ffffff;
+    background-color: var(--primary-clr);
+    cursor: pointer;
+}
+
+.row-1{
+    margin-bottom: 40px;
+}
+
+/* Section-1 */
+.section-1-bg{
+    padding: 40px 150px;
+    background-color: #EFEFEF;
+}
+
+.section-1 .explore-btn{
+    background-color: var(--primary-clr);
+    color: #ffffff;
+    padding: 15px 25px;
+}
+
+.section-1-bg h2{
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-1-bg p{
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+
+/* Section 2 */
+.each-article{
+    position: relative;
+    background-color: #fff;
+}
+.each-article-img img{
+    width: 100%;
+}
+
+.each-article-content{
+    padding: 32px;
+    background-color: var(--primary-clr);
+    height: 230px;
+    width: 50%;
+}
+
+.each-article-content-right{
+    position: absolute;
+    right: 3%;
+    top: 20%;
+}
+
+.each-article-content-left{
+    position: absolute;
+    left: 3%;
+    top: 20%;
+}
+
+.each-article-content h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.each-article-content p{
+    font-size: 14px;
+    color: #ffffff;
+    margin: 12px 0;
+}
+
+.each-article-content .continue-reading-btn{
+    color: var(--primary-clr);
+    background-color: #fff;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.asia{
+    background-color: var(--asia-bg);
+}
+
+.asia .to-left-btn{
+    color: var(--asia-bg);
+}
+
+/* Chevron icons */
+.chevron-icons .fas{
+    background-color: rgba(0,0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    margin-left: 4px;
+}
+
+.icons-left{
+    position: absolute;
+    left: 39%;
+    top: 50%;
+}
+
+.icons-right{
+    position: absolute;
+    right: 39%;
+    top: 50%;
+    margin-right: 4px;
+
+}
+
+.pull-right{
+   margin-left: 50%;
+}
+
+
+/* Section -3 */
+.continent{
+    background-color: #69C6BA;
+    padding: 25px 15px;
+    width: 14.5%;
+}
+
+.continent p{
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.active-country, .continent:hover{
+    background-color: var(--asia-bg);
+}
+
+
+/* Section -4 */
+
+.section-4 .inner-padding{
+    background-color: #fff;
+}
+
+.recommended{
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.recommended .recommended-img img{
+    width: 100%;
+}
+
+.recommended-content{
+    padding: 20px;
+    background-color: #fff;
+}
+
+.recommended-content h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.recommended-content h4{
+    font-size: 12px;
+    font-weight: 500;
+    color: #C66995;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.recommended-content p{
+    font-size: 12px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.recommended-price{
+    padding: 10px;
+    background-color: #69C6BA;
+    position: relative;
+}
+
+.recommended-price h4{
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.recommended-price a{
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.button-curve{
+    position: absolute;
+    right: 86%;
+    height: 100%;
+
+}
+
+.button-curve img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.section-4 .more-btn{
+    background-color: #69C6BA;
+    color: #fff;
+}
+
+/* Section -5 */
+
+.map{
+    position: relative;
+    font-size: 0;
+}
+
+.map iframe{
+    line-height: 0;
+}
+
+.callme form{
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.callme .input, .callme textarea{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border: 0;
+}
+
+.callme textarea::placeholder{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input-48{
+    flex: 0 1 48%;
+}
+
+.input-48 input{
+    width: 100%;
+}
+
+.input-100, .textarea-100{
+    flex: 0 1 100%;
+}
+
+.callme .form-submit{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    background-color: #69C6BA;
+    padding: 7px;
+}
+
+.map .callme{
+    position: absolute;
+    right: 5%;
+    top: 15%;
+}
+
+
+/* footer */
+.footer{
+    padding: 20px 40px;
+    background-color: #69C6BA;
+    font-size: 14px;
+    color: #fff;
+}
